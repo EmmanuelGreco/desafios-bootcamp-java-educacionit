@@ -1,0 +1,88 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 2rem;
+}
+
+h1 {
+    font-weight: 700; /* Poppins Bold */
+    font-size: 66.66px; /* No hacía falta convertir, pero se realizó según el programa indicado */
+    color: #0a2ff1;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-weight: 400; /* Poppins Regular */
+    font-size: 30.06px; /* No hacía falta convertir, pero se realizó según el programa indicado */
+    color: #0a2ff1;
+    background-color: #eff2ff;
+    margin: 0px;
+}
+
+h3 span {
+    font-weight: 700; /* Poppins Bold */
+    font-size: 30.06px; /* No hacía falta convertir, pero se realizó según el programa indicado */
+    color: #0a2ff1;
+    background-color: #eff2ff;
+    margin: 0px;
+}
+
+h4 {
+    font-weight: 400; /* Poppins Regular */
+    font-size: 30.06px; /* No hacía falta convertir, pero se realizó según el programa indicado */
+    color: #ffffff;
+    background-color: #8a9af1;
+    padding: 10px 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.imagenes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    gap: 10px;
+}
+
+.imagenes div {
+    width: calc(100% / 3);
+}
+
+.imagenes div img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.linea {
+    height: 5px;
+    width: 100%;
+    background-color: #3ffff3;
+    margin-top: 5px;
+}
+
+/* Acomodo las imágenes al 100% y en forma de columna al tener pantallas menores de 576px */
+@media (max-width: 576px) {
+    .imagenes {
+        flex-direction: column;
+        width: 100%;
+    }
+    .imagenes div {
+        width: 100%;
+    }
+    .imagenes div img {
+        width: 100%;
+        object-fit: contain;
+    }
+}

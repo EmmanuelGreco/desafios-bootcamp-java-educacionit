@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="Cache-Control">
+    <meta http-equiv="Pragma" content="no-cache">
+    <title>Educación IT - Cálculo de un presupuesto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <h1>Cálculo de un presupuesto</h1>
+    <form id="formulario-presupuesto">
+        <div class="contenedor-input">
+            <h3>Ingresos:</h3>
+            <div id="ingresos">
+                <div class="ingreso">
+                    <input type="number" id="ingreso" name="ingreso" placeholder="Monto" min="0" required>
+                </div>
+            </div>
+        </div>
+        <div class="contenedor-input">
+            <h3>Categorías:</h3>
+            <div id="categorias">
+                <div class="categoria">
+                    <input type="text" name="categoriaNombre" value="Gastos" placeholder="Nombre de la categoría" required>
+                    <input type="number" name="categoriaPorcentaje" value="50" placeholder="%" min="0" required>
+                    <button type="button" class="eliminar-boton" onclick="eliminarCategoria(this)">Eliminar</button>
+                </div>
+                <div class="categoria">
+                    <input type="text" name="categoriaNombre" value="Ahorro" placeholder="Nombre de la categoría" required>
+                    <input type="number" name="categoriaPorcentaje" value="30" placeholder="%" min="0" required>
+                    <button type="button" class="eliminar-boton" onclick="eliminarCategoria(this)">Eliminar</button>
+                </div>
+                <div class="categoria">
+                    <input type="text" name="categoriaNombre" value="Inversión" placeholder="Nombre de la categoría" required>
+                    <input type="number" name="categoriaPorcentaje" value="20" placeholder="%" min="0" required>
+                    <button type="button" class="eliminar-boton" onclick="eliminarCategoria(this)">Eliminar</button>
+                </div>
+            </div>
+            <button type="button" class="agregar-categoria-boton" onclick="agregarCategoria()">Agregar Categoría</button>
+        </div>
+        <div class="contenedor-input">
+            <button type="button" class="calcular-boton" onclick="calcularPresupuesto()">Calcular Presupuesto</button>
+            <div id="resultados">
+                    <div class="resultado" id="resultado"></div>
+            </div>
+        </div>
+    </form>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
